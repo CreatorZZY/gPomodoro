@@ -1,0 +1,111 @@
+@import "animation.scss";
+
+body {
+    background: linear-gradient(rgb(253 77 12 / 50%), rgb(68 141 118 / 50%));
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+div#interfaceviewbox {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+div#timerviewbox {
+    margin: 5%;
+    position: relative;
+    width: 80%;
+    @media screen and (max-width: 700px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50vh;
+    }
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 75%;
+    div#timerboxbluror{
+        position: absolute;
+        top: 0%;
+        bottom: 0%;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(10px);
+        background: linear-gradient(rgb(253 77 12 / 10%), rgb(68 141 118 / 10%));
+        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+        border-radius: 30px;
+    }
+    div#timerbox{
+        position: relative;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        user-select: none;
+        > span {
+            font-size: 500%;
+            font-size: 17vw;
+            font-family: Cursive;
+        }
+        cursor: none;
+    }
+}
+
+div#appTitlebox{
+
+    border-style: solid;
+    border-radius: 20px;
+    margin-right: 10%;
+    margin-left: 10%;
+    display: block;
+    text-align: center;
+    border-color: #448D76;
+    h1#appTitle{
+        font-size: Fantasy;
+        color: #448D76;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 1%;
+        margin-bottom: 1%;
+    }
+}
+
+div#buttonbar {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.buttoninbar {
+    border-radius: 10px;
+    display: inline-block;
+    padding: 1vw;
+    > span {
+        font-size: 3vw;
+        font-family: fantasy;
+    }
+    user-select: none;
+    cursor: pointer;
+}
+@media screen and (max-width: 700px) {
+    div.buttoninbar {
+        padding: 2vw;
+    > span {
+        font-size: 8vw;
+    }
+  }
+}
+
+div.buttoninbar {
+    animation: scaleback 0.08s ease-in-out 0.0s 1 normal forwards;
+}
+
+div.buttoninbar:hover {
+    animation: scale 0.3s ease-in-out 0.0s 1 normal forwards;
+}

@@ -1,0 +1,29 @@
+@keyframes scale {
+    from {
+        transform: scale(1.0);
+        transition-duration: 0.2s;
+        transition-timing-function: ease-in-out;
+        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    }
+    to {
+        transform: scale(1.1);
+        transition-duration: 0.2s;
+        transition-timing-function: ease-in-out;
+        box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+    }
+}
+
+@keyframes scaleback {
+    from {
+        transform: scale(1.1);
+        transition-duration: 0.2s;
+        transition-timing-function: ease-in-out;
+        box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+    }
+    to {
+        transform: scale(1.0);
+        transition-duration: 0.2s;
+        transition-timing-function: ease-in-out;
+        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    }
+}
